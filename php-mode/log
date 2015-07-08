@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: log
+# key: l
+# binding: direct-keybinding
+# --
+self::log($0);
