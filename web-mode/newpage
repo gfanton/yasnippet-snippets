@@ -1,0 +1,30 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: new page
+# key: newpage
+# binding: direct-keybinding
+# --
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>${1:title}</title>
+		<style>
+		body {
+			background-color: #272822;
+			color: #FFF;
+		}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		/* some js stuff */
+		$( document ).ready(function() {
+			$('body').append('<hr/>').append($('<div>').html("jQuery version: " + $.fn.jquery));
+		});
+		</script>
+	</head>
+	<body>
+		<h1>$1</h1>
+		<!-- page content -->
+		$0
+	</body>
+</html>
