@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: org add template
+# key: addsetup
+# binding: direct-keybinding
+# --
+#+SETUPFILE: ~/.spacemacs.d/org-html-themes/setup/${1:setup-file$(yas-choose-value (directory-files "~/.spacemacs.d/org-html-themes/setup" nil "\\.setup$"))}
