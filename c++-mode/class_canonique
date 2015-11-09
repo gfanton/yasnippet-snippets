@@ -1,0 +1,23 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ccls
+# key: ccls
+# binding: direct-keybinding
+# --
+
+#ifndef ${1:_`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_HPP_}
+# define $1
+
+# include <iostream>
+
+class ${2:Name}
+{
+public:
+    ${2:$(yas/substr yas-text "[^: ]*")}( void );
+    ${2:$(yas/substr yas-text "[^: ]*")}( ${2:$(yas/substr yas-text "[^: ]*")} const & src );
+    virtual ~${2:$(yas/substr yas-text "[^: ]*")}( void );
+
+    ${2:$(yas/substr yas-text "[^: ]*")} &      operator=(${2:$(yas/substr yas-text "[^: ]*")} const & rhs);
+    $0
+};
+
+#endif /* $1 */
